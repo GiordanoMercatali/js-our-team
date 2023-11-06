@@ -1,7 +1,7 @@
 /*Custom properties*/
 :root{
     --bg-color: white;
-    --primary-color: brown;
+    --primary-color: rgb(112, 95, 0);
 }
 
 /*Reset*/
@@ -9,4 +9,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.card-text{
+    color: var(--primary-color);
 }

@@ -52,12 +52,14 @@ console.log(membersList);
 for (let i = 0; i < membersList.length; i++) {
     const curMember = membersList[i];
     membersElem += `
-    <div class = "col">
+    <div class = "col-4 my-2">
         <div class = "card">
             <div class = "card-body">
                 <img src = "img/${curMember.photo}" class = "w-100">
-                <h5 class = "card-title">${curMember.fullName}</h5>
-                <p class = "card-text"> <span class = "fw-bold"> Role: </span> ${curMember.role} </p>
+                <div class = " card-text my-1 text-center">
+                    <h5 class = "card-title">${curMember.fullName}</h5>
+                    <p class = "card-text"> <span class = "fw-bold"> Role: </span> ${curMember.role} </p>
+                </div>
             </div>
         </div>
     </div>`;
