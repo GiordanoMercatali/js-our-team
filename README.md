@@ -17,4 +17,4 @@ Each member has their own: name, role and photo.
 
 ### Output
 
-All info and the image print in the page.
+Cards containing info and photos of each member.
