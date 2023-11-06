@@ -1,3 +1,6 @@
+const rowElem = document.querySelector(".row");
+let membersElem = "";
+
 const membersList = [
 
     // Wayne
@@ -45,3 +48,19 @@ const membersList = [
 ];
 
 console.log(membersList);
+
+for (let i = 0; i < membersList.length; i++) {
+    const curMember = membersList[i];
+    membersElem += `
+    <div class = "col">
+        <div class = "card">
+            <div class = "card-body">
+                
+                <h5 class = "card-title">${curMember.fullName}</h5>
+                <p class = "card-text">Role: ${curMember.role} </p>
+            </div>
+        </div>
+    </div>`;
+}
+
+rowElem.innerHTML = membersElem;
