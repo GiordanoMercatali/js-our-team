@@ -1,4 +1,4 @@
-const rowElem = document.querySelector(".row");
+// const rowElem = document.querySelector(".row");
 let membersElem = "";
 
 const membersList = [
@@ -49,8 +49,12 @@ const membersList = [
 
 console.log(membersList);
 
+drawTeam();
+
+/*
 for (let i = 0; i < membersList.length; i++) {
     const curMember = membersList[i];
+    console.log(curMember);
     membersElem += `
     <div class = "col-4 my-2">
         <div class = "card">
@@ -64,5 +68,30 @@ for (let i = 0; i < membersList.length; i++) {
         </div>
     </div>`;
 }
+*/
 
-rowElem.innerHTML = membersElem;
+function drawTeam(){
+    const rowElem = document.querySelector(".row");
+    let elemsStr = "";
+    for (let i = 0; i < membersList.length; i++) {
+        const curMember = membersList[i];
+        elemsStr += drawMember(curMember);
+    }
+    rowElem.innerHTML += elemsStr;
+}
+
+function drawMember(teamMember){
+    return `<div class = "col-4 my-2">
+    <div class = "card">
+        <div class = "card-body">
+            <img src = "img/${teamMember.photo}" class = "w-100">
+            <div class = " card-text my-1 text-center">
+                <h5 class = "card-title">${teamMember.fullName}</h5>
+                <p class = "card-text"> <span class = "fw-bold"> Role: </span> ${teamMember.role} </p>
+            </div>
+        </div>
+    </div>
+</div>`
+}
+
+// rowElem.innerHTML = membersElem;
